@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeFlex Technologies</title>
+  <script src="/assets/scripts/main_script.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/custom styles/main_style.css">
+</head>
+<body>
+  <div id="loader" class="fixed inset-0 bg-gray-900 flex flex-col items-center justify-center z-50 text-white">
+    <div class="loader-pulse mb-8">
+      <img src="/assets/images/logo.png" alt="CodeFlex Logo" class="w-33 h-32">
+    </div>
+    <p id="loader-text" class="mb-4 font-mono text-gray-300">Building futures,</p>
+    <div class="w-64 bg-gray-700 rounded-full h-2.5 mb-8">
+      <div class="loader-progress bg-blue-500 h-2.5 rounded-full"></div>
+    </div>
+    <p id="tagline" class="hidden text-xl font-light text-blue-400"> ......</p>
+  </div>
+
+  <header class="fixed top-0 w-full bg-white shadow-sm z-40 hidden md:block">
+    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+      <div class="flex items-center">
+      <img src="/assets/images/logo 2.png" alt="CodeFlex Logo" class="h-12">
+        <span class="ml-3 text-xl font-semibold text-gray-800">CodeFlex Technologies</span>
+      </div>
+      <nav class="flex space-x-8">
+        <a href="#" class="text-gray-600 hover:text-blue-500 font-medium">Home</a>
+        <a href="#about" class="text-gray-600 hover:text-blue-500 font-medium">About</a>
+        <a href="#services" class="text-gray-600 hover:text-blue-500 font-medium">Services</a>
+        <a href="#contact" class="text-gray-600 hover:text-blue-500 font-medium">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <header class="fixed top-0 w-full bg-white shadow-sm z-40 md:hidden">
+    <div class="container mx-auto px-4 py-3 flex justify-center">
+      <img src="/assets/images/logo.png" alt="CodeFlex Logo" class="h-20 w-22">
+    </div>
+  </header>
+
+
+<nav class="fixed bottom-0 w-full bg-white shadow-lg z-40 md:hidden flex justify-around py-3 px-4 border-t border-gray-100">
+
+  <a href="#" class="flex flex-col items-center text-gray-600 hover:text-blue-500 transition-colors">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+    </svg>
+    <span class="text-xs mt-1">Home</span>
+  </a>
+  
+ 
+  <a href="#about" class="flex flex-col items-center text-gray-600 hover:text-blue-500 transition-colors">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+    <span class="text-xs mt-1">About</span>
+  </a>
+  
+
+  <a href="#services" class="flex flex-col items-center text-gray-600 hover:text-blue-500 transition-colors">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+    </svg>
+    <span class="text-xs mt-1">Services</span>
+  </a>
+  
+
+  <a href="#contact" class="flex flex-col items-center text-gray-600 hover:text-blue-500 transition-colors">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+    </svg>
+    <span class="text-xs mt-1">Contact</span>
+  </a>
+</nav> 
+
+
+ 
+  <div id="content" class="opacity-0 pt-16 md:pt-0 pb-20 md:pb-0">
+
+  </div>
+</body>
+</html>
