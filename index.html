@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>CodeFlex Technologies</title>
   <link rel="icon" href="/assets/images/logo.png" type="image/png">
   <script src="/assets/scripts/main_script.js"></script>
@@ -10,8 +10,17 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="/assets/custom styles/main_style.css">
+  <style>
+    html, body {
+      width: 100%;
+      overflow-x: hidden;
+    }
+    * {
+      max-width: 100%;
+    }
+  </style>
 </head>
-<body class="font-sans bg-gray-50">
+<body class="font-sans bg-gray-50 w-full overflow-x-hidden">
   <div id="loader" class="fixed inset-0 bg-gray-900 flex flex-col items-center justify-center z-50 text-white">
     <div class="loader-pulse mb-8">
       <img src="/assets/images/logo.png" alt="CodeFlex Logo" class="w-32 h-32 mx-auto">
@@ -20,7 +29,6 @@
     <div class="w-64 bg-gray-700 rounded-full h-2.5 mb-8">
       <div class="loader-progress bg-blue-500 h-2.5 rounded-full"></div>
     </div>
-   
   </div>
 
   <header class="fixed top-0 w-full glass-header z-40 hidden md:block">
@@ -72,11 +80,10 @@
     </a>
   </nav>
 
-  <div id="content" class="opacity-0 pt-16 md:pt-0 pb-20 md:pb-0">
-  
-    <section class="min-h-screen flex items-center justify-center px-4 relative overflow-hidden bg-gradient-to-br from-blue-50 to-gray-100">
-      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center py-20">
-        <div class="text-center md:text-left" data-aos="fade-right">
+  <div id="content" class="opacity-0 pt-16 md:pt-0 pb-20 md:pb-0 w-full overflow-x-hidden">
+    <section class="min-h-screen flex items-center justify-center px-4 relative overflow-hidden bg-gradient-to-br from-blue-50 to-gray-100 w-full">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center py-20 px-4 w-full">
+        <div class="text-center md:text-left w-full" data-aos="fade-right">
           <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Building futures, <span class="text-blue-600">one line at a time</span></h1>
           <p class="text-lg text-gray-600 mb-8">Custom management systems designed for African institutions and businesses</p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
@@ -90,28 +97,27 @@
       </div>
     </section>
 
-    <section id="about" class="py-20 px-4 bg-white">
-      <div class="max-w-6xl mx-auto">
+    <section id="about" class="py-20 px-4 bg-white w-full">
+      <div class="max-w-6xl mx-auto px-4 w-full">
         <h2 class="text-3xl font-bold text-center text-gray-800 mb-12" data-aos="fade-up">About CodeFlex</h2>
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-          <div data-aos="fade-right">
+        <div class="grid md:grid-cols-2 gap-12 items-center w-full">
+          <div data-aos="fade-right" class="w-full">
             <h3 class="text-2xl font-semibold text-gray-800 mb-4">Our Mission</h3>
             <p class="text-gray-600 mb-6">We develop tailored management systems that solve real African business challenges, helping organizations streamline operations and grow efficiently.</p>
             <p class="text-gray-600">Our team combines technical expertise with deep understanding of local business environments to deliver solutions that actually work.</p>
           </div>
-          <div class="bg-gray-100 rounded-xl p-6 shadow-lg" data-aos="fade-left">
+          <div class="bg-gray-100 rounded-xl p-6 shadow-lg w-full" data-aos="fade-left">
             <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Nigerian tech team working" class="rounded-lg shadow-md w-full">
           </div>
         </div>
       </div>
     </section>
 
-  
-    <section id="services" class="py-20 px-4 bg-gray-50">
-      <div class="max-w-6xl mx-auto">
+    <section id="services" class="py-20 px-4 bg-gray-50 w-full">
+      <div class="max-w-6xl mx-auto px-4 w-full">
         <h2 class="text-3xl font-bold text-center text-gray-800 mb-12" data-aos="fade-up">Our Services</h2>
-        <div class="grid md:grid-cols-2 gap-8">
-          <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-delay="100">
+        <div class="grid md:grid-cols-2 gap-8 w-full">
+          <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 w-full" data-aos="fade-up" data-aos-delay="100">
             <div class="text-blue-500 mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
@@ -120,7 +126,7 @@
             <h3 class="text-xl font-semibold text-gray-800 mb-3">Custom Systems</h3>
             <p class="text-gray-600">Tailored management solutions for institutions and SME's</p>
           </div>
-          <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-delay="200">
+          <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 w-full" data-aos="fade-up" data-aos-delay="200">
             <div class="text-blue-500 mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
@@ -133,13 +139,13 @@
       </div>
     </section>
 
-    <section id="projects" class="py-20 px-4 bg-white">
-      <div class="max-w-6xl mx-auto">
+    <section id="projects" class="py-20 px-4 bg-white w-full">
+      <div class="max-w-6xl mx-auto px-4 w-full">
         <h2 class="text-3xl font-bold text-center text-gray-800 mb-12" data-aos="fade-up">Our Projects</h2>
         
-        <div class="bg-white rounded-xl shadow-2xl overflow-hidden" data-aos="fade-up">
-          <div class="md:flex">
-            <div class="md:w-1/2 p-8">
+        <div class="bg-white rounded-xl shadow-2xl overflow-hidden w-full" data-aos="fade-up">
+          <div class="md:flex w-full">
+            <div class="md:w-1/2 p-8 w-full">
               <h3 class="text-2xl font-bold text-gray-800 mb-4">Skul_Africa</h3>
               <div class="text-gray-600 space-y-4">
                 <p>Skul_Africa is more than a software service — it's a movement to evolve education across Africa. We build innovative, cloud-based platforms that empower schools to digitize their operations, manage students and teachers efficiently, and foster seamless connections between administrators, staff, and parents.</p>
@@ -149,26 +155,26 @@
                 <a href="https://wa.me/+2349131161483" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300 shadow-md hover:shadow-lg">Learn more</a>
               </div>
             </div>
-            <div class="md:w-1/2 bg-gray-100 flex items-center justify-center p-8">
+            <div class="md:w-1/2 bg-gray-100 flex items-center justify-center p-8 w-full">
               <img src="/assets/images/skulafrica.jpeg" alt="African students using technology" class="rounded-lg shadow-md w-full h-auto max-h-97 object-cover">
             </div>
           </div>
-          <div class="px-8 pb-8">
+          <div class="px-8 pb-8 w-full">
             <h4 class="text-lg font-semibold text-gray-800 mb-4">Key Features</h4>
-            <div class="grid md:grid-cols-3 gap-4">
-              <div class="bg-blue-50 p-4 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+            <div class="grid md:grid-cols-3 gap-4 w-full">
+              <div class="bg-blue-50 p-4 rounded-lg shadow-sm hover:shadow-md transition duration-300 w-full">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
                 </svg>
                 <p class="font-medium">Student Management</p>
               </div>
-              <div class="bg-blue-50 p-4 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+              <div class="bg-blue-50 p-4 rounded-lg shadow-sm hover:shadow-md transition duration-300 w-full">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
                 </svg>
                 <p class="font-medium">Staff Coordination</p>
               </div>
-              <div class="bg-blue-50 p-4 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+              <div class="bg-blue-50 p-4 rounded-lg shadow-sm hover:shadow-md transition duration-300 w-full">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
                 </svg>
@@ -180,202 +186,194 @@
       </div>
     </section>
 
-   
-   <section id="contact" class="py-20 px-4 bg-gray-50">
-  <div class="max-w-6xl mx-auto">
-    <h2 class="text-3xl font-bold text-center text-gray-800 mb-12" data-aos="fade-up">Get In Touch</h2>
-    <div class="grid md:grid-cols-2 gap-12 items-center">
- 
-      <div data-aos="fade-right" class="order-1 md:order-none">
-        <h3 class="text-xl font-semibold text-gray-800 mb-4">Contact Information</h3>
-        <p class="text-gray-600 mb-6">Ready to discuss your project? Reach out through any of these channels:</p>
-        <div class="space-y-4">
-          <div class="flex items-start">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500 mt-1 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-            </svg>
-            <span class="text-gray-600">info@codeflex.com</span>
+    <section id="contact" class="py-20 px-4 bg-gray-50 w-full">
+      <div class="max-w-6xl mx-auto px-4 w-full">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12" data-aos="fade-up">Get In Touch</h2>
+        <div class="grid md:grid-cols-2 gap-12 items-center w-full">
+          <div data-aos="fade-right" class="order-1 md:order-none w-full">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Contact Information</h3>
+            <p class="text-gray-600 mb-6">Ready to discuss your project? Reach out through any of these channels:</p>
+            <div class="space-y-4 w-full">
+              <div class="flex items-start w-full">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500 mt-1 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+                <span class="text-gray-600">info@codeflex.com</span>
+              </div>
+              <div class="flex items-start w-full">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500 mt-1 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                </svg>
+                <span class="text-gray-600">+234 913 116 1483</span>
+              </div>
+            </div>
           </div>
-          <div class="flex items-start">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500 mt-1 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-            </svg>
-            <span class="text-gray-600">+234 913 116 1483</span>
+
+          <div data-aos="fade-left" class="order-2 md:order-none w-full">
+            <div class="bg-white p-8 rounded-xl shadow-lg w-full">
+              <form id="contact-form" class="space-y-6 w-full">
+                <div class="w-full">
+                  <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                  <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 shadow-sm">
+                </div>
+                <div class="w-full">
+                  <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                  <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 shadow-sm">
+                </div>
+                <div class="w-full">
+                  <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                  <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 shadow-sm"></textarea>
+                </div>
+                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300 w-full shadow-md hover:shadow-lg">
+                  Send Message
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div data-aos="fade-left" class="order-2 md:order-none">
-        <div class="bg-white p-8 rounded-xl shadow-lg">
-          <form id="contact-form" class="space-y-6">
-            <div>
-              <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
-              <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 shadow-sm">
+    <div id="toast" class="fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform translate-y-10 opacity-0 transition-all duration-300 hidden">
+      Message sent successfully!
+    </div>
+
+    <script>
+      const contactForm = document.getElementById('contact-form');
+      const toast = document.getElementById('toast');
+
+      contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Sending...';
+        
+        try {
+          const response = await fetch('https://formspree.io/f/xkgwlrzk', {
+            method: 'POST',
+            body: new FormData(contactForm),
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+          
+          if (response.ok) {
+            toast.classList.remove('translate-y-10', 'opacity-0', 'hidden');
+            toast.classList.add('translate-y-0', 'opacity-100');
+            
+            contactForm.reset();
+            
+            setTimeout(() => {
+              toast.classList.remove('translate-y-0', 'opacity-100');
+              toast.classList.add('translate-y-10', 'opacity-0');
+            }, 3000);
+          } else {
+            throw new Error('Form submission failed');
+          }
+        } catch (error) {
+          toast.textContent = 'Error sending message. Please try again.';
+          toast.classList.add('bg-red-500');
+          toast.classList.remove('bg-green-500');
+          toast.classList.remove('translate-y-10', 'opacity-0', 'hidden');
+          toast.classList.add('translate-y-0', 'opacity-100');
+          
+          setTimeout(() => {
+            toast.classList.remove('translate-y-0', 'opacity-100');
+            toast.classList.add('translate-y-10', 'opacity-0');
+          }, 3000);
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = 'Send Message';
+          setTimeout(() => {
+            toast.classList.add('bg-green-500');
+            toast.classList.remove('bg-red-500');
+            toast.textContent = 'Message sent successfully!';
+          }, 3500);
+        }
+      });
+    </script>
+
+    <section id="under-development" class="py-20 px-4 bg-gray-50 w-full">
+      <div class="max-w-4xl mx-auto text-center px-4 w-full">
+        <div class="inline-block p-4 mb-6 bg-blue-100 rounded-full">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
+          </svg>
+        </div>
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Currently under development</h2>
+        <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">😂Na lie o i de sleep</p>
+        
+        <div class="w-full bg-gray-200 rounded-full h-2.5 mb-8">
+          <div class="bg-blue-600 h-2.5 rounded-full animate-pulse" style="width: 70%"></div>
+        </div>
+        
+        <div class="max-w-md mx-auto w-full">
+          <form id="suggestion-form" action="https://formspree.io/f/xkgwlrzk" method="POST" class="space-y-4 w-full">
+            <div class="w-full">
+              <textarea 
+                name="suggestion" 
+                placeholder="Your suggestions or corrections..." 
+                required
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition duration-300 min-h-[120px]"
+              ></textarea>
             </div>
-            <div>
-              <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-              <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 shadow-sm">
-            </div>
-            <div>
-              <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
-              <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 shadow-sm"></textarea>
-            </div>
-            <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300 w-full shadow-md hover:shadow-lg">
-              Send Message
+            <button 
+              type="submit" 
+              class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300 w-full shadow-md hover:shadow-lg"
+            >
+              Send
             </button>
           </form>
         </div>
+
+        <div id="toast-suggestion" class="fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform translate-y-10 opacity-0 transition-all duration-300">
+          Message delivered successfully!
+        </div>
+
+        <script>
+          const form = document.getElementById('suggestion-form');
+          const toastSuggestion = document.getElementById('toast-suggestion');
+          
+          form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const submitBtn = form.querySelector('button[type="submit"]');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'Sending...';
+            
+            try {
+              const response = await fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: {
+                  'Accept': 'application/json'
+                }
+              });
+              
+              if (response.ok) {
+                toastSuggestion.classList.remove('translate-y-10', 'opacity-0');
+                toastSuggestion.classList.add('translate-y-0', 'opacity-100');
+                
+                form.reset();
+                
+                setTimeout(() => {
+                  toastSuggestion.classList.remove('translate-y-0', 'opacity-100');
+                  toastSuggestion.classList.add('translate-y-10', 'opacity-0');
+                }, 3000);
+              } else {
+                throw new Error('Form submission failed');
+              }
+            } catch (error) {
+              alert('There was a problem sending your message. Please try again.');
+            } finally {
+              submitBtn.disabled = false;
+              submitBtn.innerHTML = 'Send';
+            }
+          });
+        </script>
       </div>
-    </div>
-  </div>
-</section>
-
-
-<div id="toast" class="fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform translate-y-10 opacity-0 transition-all duration-300 hidden">
-  Message sent successfully!
-</div>
-
-<script>
-  const contactForm = document.getElementById('contact-form');
-  const toast = document.getElementById('toast');
-
-  contactForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    
-    const submitBtn = contactForm.querySelector('button[type="submit"]');
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = 'Sending...';
-    
-    try {
-      const response = await fetch('https://formspree.io/f/xkgwlrzk', {
-        method: 'POST',
-        body: new FormData(contactForm),
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
-      
-      if (response.ok) {
-  
-        toast.classList.remove('translate-y-10', 'opacity-0', 'hidden');
-        toast.classList.add('translate-y-0', 'opacity-100');
-        
-      
-        contactForm.reset();
-        
-        
-        setTimeout(() => {
-          toast.classList.remove('translate-y-0', 'opacity-100');
-          toast.classList.add('translate-y-10', 'opacity-0');
-        }, 3000);
-      } else {
-        throw new Error('Form submission failed');
-      }
-    } catch (error) {
-      toast.textContent = 'Error sending message. Please try again.';
-      toast.classList.add('bg-red-500');
-      toast.classList.remove('bg-green-500');
-      toast.classList.remove('translate-y-10', 'opacity-0', 'hidden');
-      toast.classList.add('translate-y-0', 'opacity-100');
-      
-      setTimeout(() => {
-        toast.classList.remove('translate-y-0', 'opacity-100');
-        toast.classList.add('translate-y-10', 'opacity-0');
-      }, 3000);
-    } finally {
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = 'Send Message';
-      setTimeout(() => {
-        toast.classList.add('bg-green-500');
-        toast.classList.remove('bg-red-500');
-        toast.textContent = 'Message sent successfully!';
-      }, 3500);
-    }
-  });
-</script>
-<section id="under-development" class="py-20 px-4 bg-gray-50">
-  <div class="max-w-4xl mx-auto text-center">
-    <div class="inline-block p-4 mb-6 bg-blue-100 rounded-full">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
-      </svg>
-    </div>
-    <h2 class="text-3xl font-bold text-gray-800 mb-4">Currently under development</h2>
-    <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">😂Na lie o i de sleep</p>
-    
-    <div class="w-full bg-gray-200 rounded-full h-2.5 mb-8">
-      <div class="bg-blue-600 h-2.5 rounded-full animate-pulse" style="width: 70%"></div>
-    </div>
-    
-   <div class="max-w-md mx-auto">
-  <form id="suggestion-form" action="https://formspree.io/f/xkgwlrzk" method="POST" class="space-y-4">
-    <div>
-      <textarea 
-        name="suggestion" 
-        placeholder="Your suggestions or corrections..." 
-        required
-        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition duration-300 min-h-[120px]"
-      ></textarea>
-    </div>
-    <button 
-      type="submit" 
-      class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300 w-full shadow-md hover:shadow-lg"
-    >
-      Send
-    </button>
-  </form>
-</div>
-
-
-
-<div id="toast-suggestion" class="fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform translate-y-10 opacity-0 transition-all duration-300">
-  Message delivered successfully!
-</div>
-
-<script>
-  const form = document.getElementById('suggestion-form');
-  const toastSuggestion = document.getElementById('toast-suggestion');
-  
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    
-    const submitBtn = form.querySelector('button[type="submit"]');
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = 'Sending...';
-    
-    try {
-      const response = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
-      
-      if (response.ok) {
-        toastSuggestion.classList.remove('translate-y-10', 'opacity-0');
-        toastSuggestion.classList.add('translate-y-0', 'opacity-100');
-        
-        form.reset();
-        
-        setTimeout(() => {
-          toastSuggestion.classList.remove('translate-y-0', 'opacity-100');
-          toastSuggestion.classList.add('translate-y-10', 'opacity-0');
-        }, 3000);
-      } else {
-        throw new Error('Form submission failed');
-      }
-    } catch (error) {
-      alert('There was a problem sending your message. Please try again.');
-    } finally {
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = 'Send';
-    }
-  });
-</script>
-
-  </div>
-</section>  
+    </section>  
   </div>
 
   <script>
