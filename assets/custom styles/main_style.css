@@ -1,3 +1,29 @@
+*{
+  user-select: none;
+  outline: none;
+}
+
+
+
+
+
+::-webkit-scrollbar-thumb {
+  background: #88888800;
+  border-radius: 10px;
+  border: 2px solid #f1f1f100;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #55555500;
+}
+
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #88888800 #f1f1f100;
+}
+
+
 
 @keyframes pulse {
     0%, 100% { opacity: 0.8; transform: scale(0.95); }
@@ -13,3 +39,16 @@
   @keyframes fadeOut {
     to { opacity: 0; visibility: hidden; }
   }
+
+   .glass-header {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-top: 1px solid rgba(255, 255, 255, 0.267);
+    }
