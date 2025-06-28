@@ -3,6 +3,9 @@
   outline: none;
 }
 
+  html {
+    scroll-behavior: smooth;
+  }
 
 
 
@@ -51,4 +54,12 @@
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
       border-top: 1px solid rgba(255, 255, 255, 0.267);
+    }
+    .dark .glass-header {
+      background: rgba(17, 24, 39, 0.85);
+      color: white;
+    }
+    .dark .glass-nav {
+      background: rgba(31, 41, 55, 0.85);
+      color: white;
     }

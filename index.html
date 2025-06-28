@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>CodeFlex Technologies</title>
-  <link rel="icon" href="/assets/images/logo.png" type="image/png">
-  <script src="/assets/scripts/main_script.js"></script>
+  <link rel="icon" href="/code_flex/assets/images/logo.png" type="image/png">
+  <script src="/code_flex/assets/scripts/main_script.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/custom styles/main_style.css">
+  <link rel="stylesheet" href="/code_flex/assets/custom styles/main_style.css">
   <style>
     html, body {
       width: 100%;
@@ -20,10 +20,10 @@
     }
   </style>
 </head>
-<body class="font-sans bg-gray-50 w-full overflow-x-hidden">
+<body class="font-sans bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 w-full overflow-x-hidden">
   <div id="loader" class="fixed inset-0 bg-gray-900 flex flex-col items-center justify-center z-50 text-white">
     <div class="loader-pulse mb-8">
-      <img src="/assets/images/logo.png" alt="CodeFlex Logo" class="w-32 h-32 mx-auto">
+      <img src="/code_flex/assets/images/logo.png" alt="CodeFlex Logo" class="w-32 h-32 mx-auto">
     </div>
     <p id="loader-text" class="mb-4 font-mono text-gray-300">Building futures,</p>
     <div class="w-64 bg-gray-700 rounded-full h-2.5 mb-8">
@@ -32,9 +32,10 @@
   </div>
 
   <header class="fixed top-0 w-full glass-header z-40 hidden md:block">
+    
     <div class="container mx-auto px-6 py-3 flex justify-between items-center">
       <div class="flex items-center">
-        <img src="/assets/images/logo.png" alt="CodeFlex Logo" class="h-10">
+        <img src="/code_flex/assets/images/logo.png" alt="CodeFlex Logo" class="h-10">
         <span class="ml-3 text-xl font-semibold text-gray-800">CodeFlex Technologies</span>
       </div>
       <nav class="flex space-x-8">
@@ -49,7 +50,7 @@
 
   <header class="fixed top-0 w-full glass-header z-40 md:hidden">
     <div class="container mx-auto px-4 py-3 flex justify-center">
-      <img src="/assets/images/logo.png" alt="CodeFlex Logo" class="h-12">
+      <img src="/code_flex/assets/images/logo.png" alt="CodeFlex Logo" class="h-12">
     </div>
   </header>
 
@@ -156,30 +157,42 @@
               </div>
             </div>
             <div class="md:w-1/2 bg-gray-100 flex items-center justify-center p-8 w-full">
-              <img src="/assets/images/skulafrica.jpeg" alt="African students using technology" class="rounded-lg shadow-md w-full h-auto max-h-97 object-cover">
+              <img src="/code_flex/assets/images/photo_5956488795211810370_y.jpg" alt="African students using technology" class="rounded-lg shadow-md w-full h-auto max-h-97 object-cover">
             </div>
           </div>
           <div class="px-8 pb-8 w-full">
             <h4 class="text-lg font-semibold text-gray-800 mb-4">Key Features</h4>
+           
+
             <div class="grid md:grid-cols-3 gap-4 w-full">
-              <div class="bg-blue-50 p-4 rounded-lg shadow-sm hover:shadow-md transition duration-300 w-full">
+              <!-- Feature 1 -->
+              <div class="bg-blue-50 p-4 rounded-lg shadow-sm hover:shadow-md transition duration-300 w-full flex flex-col items-center text-center">
+                <img src="/code_flex/assets/images/students.jpeg" alt="Teachers" class="w-20 h-20 rounded-full mb-2 object-cover">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13..." />
                 </svg>
-                <p class="font-medium">Student Management</p>
+                <p class="font-medium text-gray-700">Student Management</p>
               </div>
-              <div class="bg-blue-50 p-4 rounded-lg shadow-sm hover:shadow-md transition duration-300 w-full">
+            
+              <!-- Feature 2 -->
+              <div class="bg-blue-50 p-4 rounded-lg shadow-sm hover:shadow-md transition duration-300 w-full flex flex-col items-center text-center">
+                <img src="/code_flex/assets/images/newTeachers.jpg" alt="Staff" class="w-20 h-20 rounded-full mb-2 object-cover">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13..." />
                 </svg>
-                <p class="font-medium">Staff Coordination</p>
+                <p class="font-medium text-gray-700">Staff Coordination</p>
               </div>
-              <div class="bg-blue-50 p-4 rounded-lg shadow-sm hover:shadow-md transition duration-300 w-full">
+            
+              <!-- Feature 3 -->
+              <div class="bg-blue-50 p-4 rounded-lg shadow-sm hover:shadow-md transition duration-300 w-full flex flex-col items-center text-center">
+                <img src="/code_flex/assets/images/parents.jpg" alt="Parents" class="w-20 h-20 rounded-full mb-2 object-cover">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13..." />
                 </svg>
-                <p class="font-medium">Parent Communication</p>
+                <p class="font-medium text-gray-700">Parent Communication</p>
               </div>
+            </div>
+            
             </div>
           </div>
         </div>
@@ -301,8 +314,8 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
           </svg>
         </div>
-        <h2 class="text-3xl font-bold text-gray-800 mb-4">Currently under development</h2>
-        <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">😂Na lie o i de sleep</p>
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">manage your company with ease</h2>
+        <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">Get in touch today</p>
         
         <div class="w-full bg-gray-200 rounded-full h-2.5 mb-8">
           <div class="bg-blue-600 h-2.5 rounded-full animate-pulse" style="width: 70%"></div>
@@ -375,6 +388,7 @@
       </div>
     </section>  
   </div>
+  
 
   <script>
     AOS.init({
@@ -383,5 +397,44 @@
       once: true
     });
   </script>
+  <footer class="bg-gray-900 text-gray-200 px-4 py-10 mt-12 w-full">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-6 md:space-y-0">
+      <div>
+        <h3 class="text-lg font-semibold">Follow Us</h3>
+        <p class="text-gray-400">Stay connected on our social platforms</p>
+      </div>
+      <div class="flex gap-6">
+        <a href="https://youtube.com" target="_blank" class="hover:text-white transition" title="youtube">
+          <svg class="h-6 w-6 fill-current text-red-600 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+            <path d="M19.615 3.184A3.215 3.215 0 0 1 22 5.54c.576 1.542.576 4.756.576 4.756s0 3.215-.576 4.756a3.215 3.215 0 0 1-2.385 2.355c-2.09.576-10.457.576-10.457.576s-8.367 0-10.457-.576A3.215 3.215 0 0 1 2 15.052C1.424 13.51 1.424 10.296 1.424 10.296s0-3.215.576-4.756A3.215 3.215 0 0 1 4.385 3.184C6.475 2.608 15.5 2.608 15.5 2.608s8.367 0 10.457.576zM9.75 14.548V6.044l6.385 4.252-6.385 4.252z"/>
+          </svg>
+        </a>
+        <a href="https://facebook.com" target="_blank" class="hover:text-white transition" title="facebook">
+          <svg class="h-6 w-6 fill-current text-blue-600 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+            <path d="M22.676 0H1.324C.593 0 0 .593 0 1.324v21.352C0 23.407.593 24 1.324 24h11.5V14.708H9.692V11.26h3.132V8.41c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.464.099 2.795.143v3.24h-1.918c-1.504 0-1.796.716-1.796 1.767v2.317h3.588l-.467 3.448h-3.121V24h6.116C23.407 24 24 23.407 24 22.676V1.324C24 .593 23.407 0 22.676 0"/>
+          </svg>
+        </a>
+        <a href="https://linkedin.com" target="_blank" class="hover:text-white transition" >
+          <svg class="h-6 w-6 fill-current text-blue-400 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M19.998 3A2.005 2.005 0 0 1 22 5v14a2.006 2.006 0 0 1-2.002 2H4.002A2.006 2.006 0 0 1 2 19V5a2.005 2.005 0 0 1 2.002-2h15.996zM8.339 18.339V9.998H5.667v8.341h2.672zM7 8.832c.859 0 1.555-.7 1.555-1.556A1.557 1.557 0 0 0 7 5.721c-.86 0-1.556.698-1.556 1.555 0 .858.696 1.556 1.556 1.556zM18.339 18.339v-4.448c0-2.12-1.13-3.108-2.636-3.108-1.215 0-1.762.678-2.067 1.154v-1h-2.673c.035.66 0 8.341 0 8.341h2.673v-4.658c0-.249.018-.498.091-.675.199-.497.652-1.012 1.414-1.012.997 0 1.396.764 1.396 1.882v4.463h2.672z"/>
+          </svg>
+        </a>
+        <a href="https://instagram.com" target="_blank" class="hover:text-white transition" title="instagram">
+          <svg class="h-6 w-6 fill-current text-pink-500 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.206.056 2.003.248 2.466.415a4.92 4.92 0 0 1 1.746 1.005 4.918 4.918 0 0 1 1.005 1.747c.167.462.359 1.259.415 2.465.058 1.267.07 1.647.07 4.851s-.012 3.584-.07 4.85c-.056 1.206-.248 2.003-.415 2.466a4.92 4.92 0 0 1-1.005 1.746 4.918 4.918 0 0 1-1.746 1.005c-.463.167-1.26.359-2.466.415-1.266.058-1.646.07-4.85.07s-3.584-.012-4.851-.07c-1.206-.056-2.003-.248-2.465-.415a4.918 4.918 0 0 1-1.747-1.005 4.92 4.92 0 0 1-1.005-1.746c-.167-.463-.359-1.26-.415-2.466C2.175 15.746 2.163 15.366 2.163 12s.012-3.584.07-4.851c.056-1.206.248-2.003.415-2.465A4.92 4.92 0 0 1 3.653 2.937a4.918 4.918 0 0 1 1.747-1.005c.462-.167 1.259-.359 2.465-.415C8.416 2.175 8.796 2.163 12 2.163zM12 0C8.741 0 8.332.014 7.052.072 5.772.13 4.67.346 3.678.778a7.013 7.013 0 0 0-2.549 1.643A7.013 7.013 0 0 0 .778 4.97c-.432.992-.648 2.094-.706 3.374C.014 8.741 0 9.151 0 12s.014 3.259.072 4.539c.058 1.28.274 2.382.706 3.374a7.013 7.013 0 0 0 1.643 2.549 7.013 7.013 0 0 0 2.549 1.643c.992.432 2.094.648 3.374.706C8.741 23.986 9.151 24 12 24s3.259-.014 4.539-.072c1.28-.058 2.382-.274 3.374-.706a7.013 7.013 0 0 0 2.549-1.643 7.013 7.013 0 0 0 1.643-2.549c.432-.992.648-2.094.706-3.374.058-1.28.072-1.689.072-4.539s-.014-3.259-.072-4.539c-.058-1.28-.274-2.382-.706-3.374a7.013 7.013 0 0 0-1.643-2.549 7.013 7.013 0 0 0-2.549-1.643c-.992-.432-2.094-.648-3.374-.706C15.259.014 14.849 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+          </svg>
+        </a>
+        <a href="https://x.com" target="_blank" class="hover:text-white transition" title="x.com">
+          <svg class="h-6 w-6 fill-current text-white hover:text-blue-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M22.675 0h-21.35C.597 0 0 .598 0 1.333v21.334C0 23.402.597 24 1.325 24h21.351C23.403 24 24 23.402 24 22.667V1.333C24 .598 23.403 0 22.675 0zm-6.588 18l-2.93-3.94-2.948 3.94H7.084l4.167-5.438-4.088-5.561h2.952l2.808 3.825 2.785-3.825h2.86l-4.056 5.459L18.087 18h-2.998z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="mt-8 text-sm text-center text-gray-500">
+      &copy; 2025 CodeFlex Technologies. All rights reserved.
+    </div>
+  </footer>
+  
 </body>
 </html>
