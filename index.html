@@ -1,26 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>CodeFlex Technologies</title>
-  <link rel="icon" href="./assets/images/logo.png" type="image/png">
-  <script src="./assets/scripts/main_script.js"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="./assets/custom styles/main_style.css">
-  <style>
-    html, body {
-      width: 100%;
-      overflow-x: hidden;
+  <script src="./assets/scripts/main_script.js"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            dark: {
+              900: '#0f172a',
+              800: '#1e293b',
+              700: '#334155',
+            }
+          }
+        }
+      }
     }
-    * {
-      max-width: 100%;
-    }
-  </style>
+  </script>
 </head>
-<body class="font-sans bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 w-full overflow-x-hidden">
+<body class="font-sans bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 w-full overflow-x-hidden">
+  <!-- Loader -->
   <div id="loader" class="fixed inset-0 bg-gray-900 flex flex-col items-center justify-center z-50 text-white">
     <div class="loader-pulse mb-8">
       <img src="./assets/images/logo.png" alt="CodeFlex Logo" class="w-32 h-32 mx-auto">
@@ -31,28 +29,44 @@
     </div>
   </div>
 
+  <!-- Desktop Header -->
   <header class="fixed top-0 w-full glass-header z-40 hidden md:block">
-    
     <div class="container mx-auto px-6 py-3 flex justify-between items-center">
       <div class="flex items-center">
-  <img src="./assets/images/logo.png" alt="CodeFlex Logo" class="h-16 sm:h-20">
-        <span class="ml-3 text-xl font-semibold text-gray-800">CodeFlex Technologies</span>
+        <img src="./assets/images/logo.png" alt="CodeFlex Logo" class="h-16 sm:h-20">
+        <span class="ml-3 text-xl font-semibold text-gray-800 dark:text-gray-100">CodeFlex Technologies</span>
       </div>
-      <nav class="flex space-x-8">
-        <a href="#" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Home</a>
-        <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">About</a>
-        <a href="#services" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Services</a>
-        <a href="#projects" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Projects</a>
-        <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Contact</a>
+      <nav class="flex items-center space-x-8">
+        <a href="#" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">Home</a>
+        <a href="#about" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">About</a>
+        <a href="#services" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">Services</a>
+        <a href="#projects" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">Projects</a>
+        <a href="#contact" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">Contact</a>
+        <button id="theme-toggle" class="theme-switcher">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700 dark:text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" class="dark:hidden"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" class="hidden dark:block"/>
+          </svg>
+        </button>
       </nav>
     </div>
   </header>
 
+  <!-- Mobile Header -->
   <header class="fixed top-0 w-full glass-header z-40 md:hidden">
-    <div class="container mx-auto px-4 py-3 flex justify-left">
-     <img src="./assets/images/logo.png" alt="CodeFlex Logo" class="w-32 h-32 mx-auto">
+    <div class="container mx-auto px-4 py-3">
+      <div class="mobile-logo-container">
+        <img src="./assets/images/logo.png" alt="CodeFlex Logo" class="mobile-logo">
+        <button id="theme-toggle-mobile" class="theme-switcher">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700 dark:text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" class="dark:hidden"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" class="hidden dark:block"/>
+          </svg>
+        </button>
+      </div>
     </div>
   </header>
+
 
   <nav class="fixed bottom-0 w-full glass-nav z-40 md:hidden flex justify-around py-3 px-4">
     <a href="#" class="flex flex-col items-center text-gray-700 hover:text-blue-600 transition-colors">
