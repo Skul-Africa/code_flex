@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 1000);
 
     setTimeout(() => {
-      loaderText.textContent = "Building futures, One line at a time";
+      loaderText.textContent = "";
       tagline.classList.remove('hidden');
     }, 2000);
 
