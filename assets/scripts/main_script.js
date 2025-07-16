@@ -12,13 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
       loaderText.textContent = "Building futures, One line at a time";
       tagline.classList.remove('hidden');
-    }, 1000);
+    }, 2000);
 
 
     setTimeout(() => {
       loader.classList.add('fade-out');
       content.style.opacity = '1';
-    }, 1000);
+    }, 2000);
   });
 
 document.addEventListener('contextmenu', function(e) {
