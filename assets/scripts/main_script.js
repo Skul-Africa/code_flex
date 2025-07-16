@@ -42,3 +42,26 @@ document.addEventListener('mousedown', function(e) {
   }
 });
 
+  document.addEventListener('DOMContentLoaded', function() {
+      const themeToggle = document.getElementById('theme-toggle');
+      const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+      const themeIconLight = document.getElementById('theme-icon-light');
+      const themeIconDark = document.getElementById('theme-icon-dark');
+      const mobileThemeIconLight = document.getElementById('mobile-theme-icon-light');
+      const mobileThemeIconDark = document.getElementById('mobile-theme-icon-dark');
+
+      function toggleIcons() {
+        themeIconLight.classList.toggle('hidden');
+        themeIconDark.classList.toggle('hidden');
+        mobileThemeIconLight.classList.toggle('hidden');
+        mobileThemeIconDark.classList.toggle('hidden');
+      }
+
+      if (themeToggle) {
+        themeToggle.addEventListener('click', toggleIcons);
+      }
+
+      if (mobileThemeToggle) {
+        mobileThemeToggle.addEventListener('click', toggleIcons);
+      }
+    });

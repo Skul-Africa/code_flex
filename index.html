@@ -6,6 +6,7 @@
   <title>CodeFlex Technologies</title>
   <link rel="icon" href="./assets/images/logo.png" type="image/png">
   <script src="./assets/scripts/main_script.js"></script>
+  <script src="./assets/scripts/toggle.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -25,61 +26,79 @@
     <div class="loader-pulse mb-8">
       <img src="./assets/images/logo.png" alt="CodeFlex Logo" class="w-32 h-32 mx-auto">
     </div>
-    <p id="loader-text" class="mb-4 font-mono text-gray-300">Building futures,</p>
+    <p id="loader-text" class="mb-4 font-mono text-gray-300"></p>
     <div class="w-64 bg-gray-700 rounded-full h-2.5 mb-8">
       <div class="loader-progress bg-blue-500 h-2.5 rounded-full"></div>
     </div>
   </div>
 
   <header class="fixed top-0 w-full glass-header z-40 hidden md:block">
-    
     <div class="container mx-auto px-6 py-3 flex justify-between items-center">
       <div class="flex items-center">
-  <img src="./assets/images/logo.png" alt="CodeFlex Logo" class="h-16 sm:h-20">
-        <span class="ml-3 text-xl font-semibold text-gray-800">CodeFlex Technologies</span>
+        <img src="./assets/images/logo.png" alt="CodeFlex Logo" class="h-16 sm:h-20">
+        <span class="ml-3 text-xl font-semibold text-gray-800 dark:text-gray-100">CodeFlex Technologies</span>
       </div>
-      <nav class="flex space-x-8">
-        <a href="#" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Home</a>
-        <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">About</a>
-        <a href="#services" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Services</a>
-        <a href="#projects" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Projects</a>
-        <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Contact</a>
-      </nav>
+      <div class="flex items-center space-x-8">
+        <nav class="flex space-x-8">
+          <a href="#" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">Home</a>
+          <a href="#about" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">About</a>
+          <a href="#services" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">Services</a>
+          <a href="#projects" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">Projects</a>
+          <a href="#contact" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">Contact</a>
+        </nav>
+        <button id="theme-toggle" class="p-2 rounded-full focus:outline-none">
+          <svg id="theme-icon-light" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <svg id="theme-icon-dark" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-400 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+      </div>
     </div>
   </header>
 
   <header class="fixed top-0 w-full glass-header z-40 md:hidden">
-    <div class="container mx-auto px-4 py-3 flex justify-center">
-     <img src="./assets/images/logo.png" alt="CodeFlex Logo" class="w-32 h-32 mx-auto">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <img src="./assets/images/logo.png" alt="CodeFlex Logo" class="w-16 h-16">
+      <button id="mobile-theme-toggle" class="p-2 rounded-full focus:outline-none">
+        <svg id="mobile-theme-icon-light" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+        <svg id="mobile-theme-icon-dark" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        </svg>
+      </button>
     </div>
   </header>
 
   <nav class="fixed bottom-0 w-full glass-nav z-40 md:hidden flex justify-around py-3 px-4">
-    <a href="#" class="flex flex-col items-center text-gray-700 hover:text-blue-600 transition-colors">
+    <a href="#" class="flex flex-col items-center text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
       </svg>
       <span class="text-xs mt-1">Home</span>
     </a>
-    <a href="#about" class="flex flex-col items-center text-gray-700 hover:text-blue-600 transition-colors">
+    <a href="#about" class="flex flex-col items-center text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
       </svg>
       <span class="text-xs mt-1">About</span>
     </a>
-    <a href="#services" class="flex flex-col items-center text-gray-700 hover:text-blue-600 transition-colors">
+    <a href="#services" class="flex flex-col items-center text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/>
       </svg>
       <span class="text-xs mt-1">Services</span>
     </a>
-    <a href="#contact" class="flex flex-col items-center text-gray-700 hover:text-blue-600 transition-colors">
+    <a href="#contact" class="flex flex-col items-center text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
       </svg>
       <span class="text-xs mt-1">Contact</span>
     </a>
   </nav>
+
 
   <div id="content" class="opacity-0 pt-16 md:pt-0 pb-20 md:pb-0 w-full overflow-x-hidden">
     <section class="min-h-screen flex items-center justify-center px-4 relative overflow-hidden bg-white w-full">
@@ -367,41 +386,70 @@
       once: true
     });
   </script>
-  <footer class="bg-gray-900 text-gray-200 px-4 py-10 mt-12 w-full">
+<footer class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 px-4 py-10 mt-12 w-full border-t border-gray-200 dark:border-gray-700">
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-6 md:space-y-0">
       <div>
         <h3 class="text-lg font-semibold">Follow Us</h3>
-        <p class="text-gray-400">Stay connected on our social platforms</p>
+        <p class="text-gray-600 dark:text-gray-400">Stay connected on our social platforms</p>
       </div>
       <div class="flex gap-6">
-        <a href="https://youtube.com" target="_blank" class="hover:text-white transition" title="youtube">
-          <svg class="h-6 w-6 fill-current text-red-600 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
-            <path d="M19.615 3.184A3.215 3.215 0 0 1 22 5.54c.576 1.542.576 4.756.576 4.756s0 3.215-.576 4.756a3.215 3.215 0 0 1-2.385 2.355c-2.09.576-10.457.576-10.457.576s-8.367 0-10.457-.576A3.215 3.215 0 0 1 2 15.052C1.424 13.51 1.424 10.296 1.424 10.296s0-3.215.576-4.756A3.215 3.215 0 0 1 4.385 3.184C6.475 2.608 15.5 2.608 15.5 2.608s8.367 0 10.457.576zM9.75 14.548V6.044l6.385 4.252-6.385 4.252z"/>
-          </svg>
+        <!-- YouTube -->
+        <a href="https://youtube.com" target="_blank" class="group bg-gradient-to-tr" title="YouTube">
+          <div class="p-2 rounded-full w-8 h-9 bg-gray-300 transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FF0000" class="w-full h-full">
+
+    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+  </svg>
+          </div> 
         </a>
-        <a href="https://facebook.com" target="_blank" class="hover:text-white transition" title="facebook">
-          <svg class="h-6 w-6 fill-current text-blue-600 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
-            <path d="M22.676 0H1.324C.593 0 0 .593 0 1.324v21.352C0 23.407.593 24 1.324 24h11.5V14.708H9.692V11.26h3.132V8.41c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.464.099 2.795.143v3.24h-1.918c-1.504 0-1.796.716-1.796 1.767v2.317h3.588l-.467 3.448h-3.121V24h6.116C23.407 24 24 23.407 24 22.676V1.324C24 .593 23.407 0 22.676 0"/>
-          </svg>
+        
+        <!-- Facebook -->
+        <a href="https://facebook.com" target="_blank" class="group" title="Facebook">
+          <div class="p-2 rounded-full bg-blue-600 group-hover:bg-blue-700 transition-colors duration-300">
+            <svg class="h-5 w-5 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M22.676 0H1.324C.593 0 0 .593 0 1.324v21.352C0 23.407.593 24 1.324 24h11.5V14.708H9.692V11.26h3.132V8.41c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.464.099 2.795.143v3.24h-1.918c-1.504 0-1.796.716-1.796 1.767v2.317h3.588l-.467 3.448h-3.121V24h6.116C23.407 24 24 23.407 24 22.676V1.324C24 .593 23.407 0 22.676 0"/>
+            </svg>
+          </div>
         </a>
-        <a href="https://linkedin.com" target="_blank" class="hover:text-white transition" >
-          <svg class="h-6 w-6 fill-current text-blue-400 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M19.998 3A2.005 2.005 0 0 1 22 5v14a2.006 2.006 0 0 1-2.002 2H4.002A2.006 2.006 0 0 1 2 19V5a2.005 2.005 0 0 1 2.002-2h15.996zM8.339 18.339V9.998H5.667v8.341h2.672zM7 8.832c.859 0 1.555-.7 1.555-1.556A1.557 1.557 0 0 0 7 5.721c-.86 0-1.556.698-1.556 1.555 0 .858.696 1.556 1.556 1.556zM18.339 18.339v-4.448c0-2.12-1.13-3.108-2.636-3.108-1.215 0-1.762.678-2.067 1.154v-1h-2.673c.035.66 0 8.341 0 8.341h2.673v-4.658c0-.249.018-.498.091-.675.199-.497.652-1.012 1.414-1.012.997 0 1.396.764 1.396 1.882v4.463h2.672z"/>
-          </svg>
+        
+        <!-- LinkedIn -->
+        <a href="https://linkedin.com" target="_blank" class="group" title="LinkedIn">
+          <div class="p-2 rounded-full bg-blue-500 group-hover:bg-blue-600 transition-colors duration-300">
+            <svg class="h-5 w-5 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M19.998 3A2.005 2.005 0 0 1 22 5v14a2.006 2.006 0 0 1-2.002 2H4.002A2.006 2.006 0 0 1 2 19V5a2.005 2.005 0 0 1 2.002-2h15.996zM8.339 18.339V9.998H5.667v8.341h2.672zM7 8.832c.859 0 1.555-.7 1.555-1.556A1.557 1.557 0 0 0 7 5.721c-.86 0-1.556.698-1.556 1.555 0 .858.696 1.556 1.556 1.556zM18.339 18.339v-4.448c0-2.12-1.13-3.108-2.636-3.108-1.215 0-1.762.678-2.067 1.154v-1h-2.673c.035.66 0 8.341 0 8.341h2.673v-4.658c0-.249.018-.498.091-.675.199-.497.652-1.012 1.414-1.012.997 0 1.396.764 1.396 1.882v4.463h2.672z"/>
+            </svg>
+          </div>
         </a>
-        <a href="https://instagram.com" target="_blank" class="hover:text-white transition" title="instagram">
-          <svg class="h-6 w-6 fill-current text-pink-500 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.206.056 2.003.248 2.466.415a4.92 4.92 0 0 1 1.746 1.005 4.918 4.918 0 0 1 1.005 1.747c.167.462.359 1.259.415 2.465.058 1.267.07 1.647.07 4.851s-.012 3.584-.07 4.85c-.056 1.206-.248 2.003-.415 2.466a4.92 4.92 0 0 1-1.005 1.746 4.918 4.918 0 0 1-1.746 1.005c-.463.167-1.26.359-2.466.415-1.266.058-1.646.07-4.85.07s-3.584-.012-4.851-.07c-1.206-.056-2.003-.248-2.465-.415a4.918 4.918 0 0 1-1.747-1.005 4.92 4.92 0 0 1-1.005-1.746c-.167-.463-.359-1.26-.415-2.466C2.175 15.746 2.163 15.366 2.163 12s.012-3.584.07-4.851c.056-1.206.248-2.003.415-2.465A4.92 4.92 0 0 1 3.653 2.937a4.918 4.918 0 0 1 1.747-1.005c.462-.167 1.259-.359 2.465-.415C8.416 2.175 8.796 2.163 12 2.163zM12 0C8.741 0 8.332.014 7.052.072 5.772.13 4.67.346 3.678.778a7.013 7.013 0 0 0-2.549 1.643A7.013 7.013 0 0 0 .778 4.97c-.432.992-.648 2.094-.706 3.374C.014 8.741 0 9.151 0 12s.014 3.259.072 4.539c.058 1.28.274 2.382.706 3.374a7.013 7.013 0 0 0 1.643 2.549 7.013 7.013 0 0 0 2.549 1.643c.992.432 2.094.648 3.374.706C8.741 23.986 9.151 24 12 24s3.259-.014 4.539-.072c1.28-.058 2.382-.274 3.374-.706a7.013 7.013 0 0 0 2.549-1.643 7.013 7.013 0 0 0 1.643-2.549c.432-.992.648-2.094.706-3.374.058-1.28.072-1.689.072-4.539s-.014-3.259-.072-4.539c-.058-1.28-.274-2.382-.706-3.374a7.013 7.013 0 0 0-1.643-2.549 7.013 7.013 0 0 0-2.549-1.643c-.992-.432-2.094-.648-3.374-.706C15.259.014 14.849 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
-          </svg>
+        
+        <!-- Instagram -->
+        <a href="https://instagram.com" target="_blank" class="group" title="Instagram">
+          <div class="p-2 rounded-full bg-gradient-to-tr from-purple-600 via-pink-600 to-yellow-500 group-hover:opacity-90 transition-opacity duration-300">
+            <svg class="h-5 w-5 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.206.056 2.003.248 2.466.415a4.92 4.92 0 0 1 1.746 1.005 4.918 4.918 0 0 1 1.005 1.747c.167.462.359 1.259.415 2.465.058 1.267.07 1.647.07 4.851s-.012 3.584-.07 4.85c-.056 1.206-.248 2.003-.415 2.466a4.92 4.92 0 0 1-1.005 1.746 4.918 4.918 0 0 1-1.746 1.005c-.463.167-1.26.359-2.466.415-1.266.058-1.646.07-4.85.07s-3.584-.012-4.851-.07c-1.206-.056-2.003-.248-2.465-.415a4.918 4.918 0 0 1-1.747-1.005 4.92 4.92 0 0 1-1.005-1.746c-.167-.463-.359-1.26-.415-2.466C2.175 15.746 2.163 15.366 2.163 12s.012-3.584.07-4.851c.056-1.206.248-2.003.415-2.465A4.92 4.92 0 0 1 3.653 2.937a4.918 4.918 0 0 1 1.747-1.005c.462-.167 1.259-.359 2.465-.415C8.416 2.175 8.796 2.163 12 2.163zM12 0C8.741 0 8.332.014 7.052.072 5.772.13 4.67.346 3.678.778a7.013 7.013 0 0 0-2.549 1.643A7.013 7.013 0 0 0 .778 4.97c-.432.992-.648 2.094-.706 3.374C.014 8.741 0 9.151 0 12s.014 3.259.072 4.539c.058 1.28.274 2.382.706 3.374a7.013 7.013 0 0 0 1.643 2.549 7.013 7.013 0 0 0 2.549 1.643c.992.432 2.094.648 3.374.706C8.741 23.986 9.151 24 12 24s3.259-.014 4.539-.072c1.28-.058 2.382-.274 3.374-.706a7.013 7.013 0 0 0 2.549-1.643 7.013 7.013 0 0 0 1.643-2.549c.432-.992.648-2.094.706-3.374.058-1.28.072-1.689.072-4.539s-.014-3.259-.072-4.539c-.058-1.28-.274-2.382-.706-3.374a7.013 7.013 0 0 0-1.643-2.549 7.013 7.013 0 0 0-2.549-1.643c-.992-.432-2.094-.648-3.374-.706C15.259.014 14.849 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+            </svg>
+          </div>
         </a>
-        <a href="https://x.com" target="_blank" class="hover:text-white transition" title="x.com">
-          <svg class="h-6 w-6 fill-current text-white hover:text-blue-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M22.675 0h-21.35C.597 0 0 .598 0 1.333v21.334C0 23.402.597 24 1.325 24h21.351C23.403 24 24 23.402 24 22.667V1.333C24 .598 23.403 0 22.675 0zm-6.588 18l-2.93-3.94-2.948 3.94H7.084l4.167-5.438-4.088-5.561h2.952l2.808 3.825 2.785-3.825h2.86l-4.056 5.459L18.087 18h-2.998z"/>
-          </svg>
+        
+        <!-- Twitter/X -->
+        <a href="https://x.com" target="_blank" class="group" title="X (Twitter)">
+          <div class="p-2 rounded-full bg-black group-hover:bg-gray-800 transition-colors duration-300">
+            <svg class="h-5 w-5 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </div>
+        </a>
+        
+        <!-- GitHub -->
+        <a href="https://github.com" target="_blank" class="group" title="GitHub">
+          <div class="p-2 rounded-full bg-gray-800 group-hover:bg-gray-900 transition-colors duration-300">
+            <svg class="h-5 w-5 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+            </svg>
+          </div>
         </a>
       </div>
     </div>
-    <div class="mt-8 text-sm text-center text-gray-500">
+    <div class="mt-8 text-sm text-center text-gray-600 dark:text-gray-400">
       &copy; 2025 CodeFlex Technologies. All rights reserved.
     </div>
   </footer>
