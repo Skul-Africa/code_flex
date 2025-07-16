@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     setTimeout(() => {
-      loaderText.textContent = "Building futures..";
+      loaderText.textContent = "";
     }, 1000);
 
     setTimeout(() => {
